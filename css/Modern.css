@@ -1,11 +1,18 @@
-
+html{
+    overflow-x: hidden;
+}
+body {
+    padding-left: 0;
+}
+a:hover {
+    color: #0056b3;
+    text-decoration: none
+}
 .mb-auto, .my-auto{
     height: 100vh;
     padding: 100px;
 }
-.eee{
-    background-color: #eeeeee;
-}
+
 .rem2{
     font-size: 2rem;
 }
@@ -20,6 +27,369 @@
     color: white;   
 }
 .spaceBottom{
-    margin-bottom: 100px !important;
+    margin-bottom: 30px !important;
     text-align: center;
 }
+.tabs a{
+    transition-duration: 0.2s;
+}
+.profileImg {
+    background-image: url(../img/sulaimanzahir94-gmail.jpg);
+    border: 10px solid #3873bd;
+    box-shadow: 3px 3px 6px 
+    black;
+    transform: rotate(-5deg);
+    transition:all 0.4s ease-in-out;
+    cursor: pointer;
+    height: 500px;
+    width: 500px;
+    background-size: cover;
+}
+.profileImg:hover{
+    border:10px solid #0056b3;
+}
+.profileImg-center{
+    transform: rotate(0deg);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -250px;
+    /* filter: brightness(1.5); */
+    filter: contrast(1.5);
+}
+
+.UniversityImg {
+    border: 10px solid;
+    box-shadow: 3px 3px 6px 
+    black;
+    transform: rotate(5deg);
+    width: 500px;
+    transition:all 0.4s ease-in-out;
+    cursor: pointer;
+}
+.UniversityImg:hover{
+    transform: rotate(0deg);
+}
+.University-center{
+    width: 40%;
+    margin: auto;
+}
+.marginTop60{
+    margin-top: 60px;
+}
+.colorEEE{
+    color: #eee !important;
+}
+.colorblack{
+    color: #343a40 !important;
+}
+.fontSize30{
+    font-size: 30px;
+}
+.fontSize25{
+    font-size: 25px;
+}
+.fontSize20{
+    font-size: 20px;
+}
+.colored{
+    font-size: 80px;
+}
+.custome-border-bottom{
+    border-bottom: 1px solid black;;
+}
+.imgSkillsCenter {
+    width: 33%;
+    margin: auto;
+}
+.list-item-center{
+    width: 80%;
+    margin: auto;
+}
+
+.imgInterests {
+    margin: 10px;
+    margin-top: 80px;
+    border: 10px solid;
+    position: absolute;
+    box-shadow: 3px 3px 4px black;
+    transition: all 0.4s ease-in-out;
+}
+.imgInterests:hover{
+    z-index: 9 !important;
+}
+
+.imgInterests:nth-child(1){
+    width: 250px;
+height: 190px;
+left: 12%;
+transform: rotate(-18deg);
+}
+.imgInterests:nth-child(2){
+    width: 290px;
+    height: 185px;
+    left: 24%;
+    z-index: 7;
+    transform: rotate(11deg);
+    top: 27%;
+}
+.imgInterests:nth-child(3){
+    width: 325px;
+    height: 200px;
+    left: 50%;
+    margin-left: -150px;
+    transform: rotate(3deg);
+    z-index: 8;
+    top: 23%;
+}
+.imgInterests:nth-child(4){
+    width: 250px;
+    height: 180px;
+    left: 60%;
+    z-index: 1;
+    transform: rotate(-2deg);
+    margin-top: 50px;
+}
+.imgInterests:nth-child(5){
+    width: 230px;
+    height: 145px;
+    left: 74%;
+    transform: rotate(-12deg);
+}
+.imgInterests:nth-child(6){
+    width: 260px;
+height: 175px;
+left: 27%;
+top: 48%;
+transform: rotate(6deg);
+z-index: 6;
+}
+.imgInterests:nth-child(7){
+    width: 280px;
+
+height: 190px;
+
+left: 40%;
+
+z-index: 7;
+
+transform: rotate(20deg);
+
+top: 44%;
+}
+.imgInterests:nth-child(8){
+    width: 275px;
+
+height: 175px;
+
+left: 58%;
+
+margin-top: 210px;
+
+transform: rotate(10deg);
+}
+
+.custome-bg-transparent {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0.5, 0.5, 0.5,0.5);
+}
+
+#AutoText {
+    font-size: 16px;
+    bottom: 0;
+    position: absolute;
+    color:white;
+    background-color:black;
+    margin: 0;
+}
+
+.modalView {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+    margin: 0 auto;
+}
+.imgMySlides {
+    width: 86% !important;
+    height: 100%;
+    margin: 0 8%;
+}
+.close{
+    top: 50px;
+    right: 50px;
+}
+.custome-chevron-down,.header-menu{
+    display: none;
+}
+.svg-inline--fa.fa-chevron-down.fa-w-14.custome-chevron-down {
+    font-size: 35px;
+    position: absolute;
+    top: 18px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    right: 20px;
+    border: 1px solid gray;
+    padding: 5px !important;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #3873bd;
+}
+.flib-back{
+    transform: rotate(180deg);
+}
+.MenueTitle{
+    padding-top: 15px;
+    display: none;
+}
+
+/*-----------------------------------------------------------------*/
+/*--------------------------- media -------------------------------*/
+/*-----------------------------------------------------------------*/
+
+
+@media only screen and (max-width: 412px) {
+    body{
+        padding: unset !important;
+    }
+    .mb-auto, .my-auto{
+        padding: 25px;
+    }
+    .wrapper {
+
+        text-align: center;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        margin:unset;
+        left: unset;
+        transform: unset;
+    }
+    .tabs{
+        border-radius:unset;
+        width: 100%;
+    }
+    .tabs a{
+        display: block;
+    }
+    .tabs .selector{
+        height: 38px;
+        margin: 2px;
+        top: 70px;
+        width: calc(100% - 4px) !important;
+    }
+    .custome-chevron-down,.header-menu{
+        display: block;
+    }
+    .header-menu{
+        cursor: pointer;
+        height: 70px;
+        box-shadow: 1px 0px 4px black;
+    }
+    .menu-content{
+        display: none;
+    }
+    .profileImg{
+        height: 350px;
+        width: 350px;
+    }
+    .cd-section{
+        height: auto;
+    }
+    .mb-auto, .my-auto{
+        height: auto;
+    }
+    .profileImg-center{
+        margin-left: -175px;
+        margin-top: -175px;
+    }
+    .icon-pack2 {
+        margin-left: unset;
+    }
+    .University-center{
+        width: 100%;
+    }
+    .UniversityImg{
+        width: 360px;
+    }
+    .imgSkillsCenter {
+        width: 80%;
+        margin: auto;
+    }
+    .imgSkills {
+        width: 130px;
+        height: 85px;
+    }
+    .imgSkills {
+        margin-top: 20px;
+        margin-right: 25px;
+        margin-bottom: 25px;
+    }
+    .imgInterests{
+        position: unset;
+    }
+    .imgInterests:nth-child(2){
+        top: unset;
+        margin-top: -50px;
+        z-index: 0;
+    }
+    .imgInterests:nth-child(3){
+        z-index: 0;
+        left: unset;
+        top: unset;
+        margin-left: unset;
+        margin-top: -40px;
+    }
+    .imgInterests:nth-child(4){
+        z-index: 0;
+        margin-top: -10px;
+        margin-left: 50px;
+    }
+    .imgInterests:nth-child(5){
+        z-index: 0;
+        margin-top: -20px;
+        margin-left: 100px;
+    }
+    .imgInterests:nth-child(6){
+        z-index: 0;
+        margin-top: -25px;
+        margin-left: 60px;
+    }
+    .imgInterests:nth-child(7){
+        z-index: 0;
+        margin-top: -35px;
+        margin-left: 46px;
+    }
+    .imgInterests:nth-child(8){
+        z-index: 0;
+        margin-top: -40px;
+        margin-left: 40px;
+        margin-bottom: 45px;
+    }
+    .albums-tab-thumb{
+        margin-top: 0px;
+        margin-bottom: 60px;
+        width: 90px;
+    }
+    .modalView{
+        width: 80%;
+        margin-top: 50px;
+    }
+    .mySlides{
+        height: 350px;
+    }
+    .imgMySlides{
+        margin: 30% 8%;
+    }
+  }

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <title> ESchool </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <link rel="stylesheet" href="../OurSite/css/Default.css" />
+    <link href="../All_JS_CSS/Admin/css/all.min.css" rel="stylesheet" />
+    <script src="../All_JS_CSS/Admin/js/all.min.js"></script>
+</head>
+<body data-hijacking="off" data-animation="rotate">
+    <div class="wrapper" style="height:5vh;">
+        <nav class="tabs">
+            <div class="selector"></div>
+            <a href="#" data-left="0" data-scroll="home" class="active"><i></i>Home</a> <!--<i class="fab fa-superpowers"></i>-->
+            <a href="#" data-left="91.3666" data-scroll="classes"><i></i>Classes</a> <!--<i classs="fas fa-hand-rock"></i>-->
+            <a href="#" data-left="203.083" data-scroll="vidoes"><i></i>Vidoes</a> <!--<i class="fas fa-bolt"></i>-->
+            <a href="#" data-left="303.017" data-scroll="attachments"><i></i>Attachments</a> <!--<i class="fas fa-burn"></i>-->
+            <a href="#" data-left="458.017" data-scroll="register"><i></i>register</a> <!--<i class="fas fa-burn"></i>-->
+            <a href="#" data-left="574.417" data-scroll="aboutus"><i></i>aboutus</a> <!--<i class="fas fa-burn"></i>-->
+            <a href="#" id="language"><i></i>language</a> <!--<i class="fas fa-burn"></i>-->
+        </nav>
+    </div>
+    <section id="home" class="cd-section visible active">
+        <div>
+            <h2>home</h2>
+        </div>
+    </section>
+    <section id="classes" class="cd-section">
+        <div>
+            <h2>classes</h2>
+        </div>
+    </section>
+    <section id="vidoes" class="cd-section">
+        <div>
+            <h2>vidoes</h2>
+        </div>
+    </section>
+    <section id="attachments" class="cd-section">
+        <div>
+            <h2>attachments</h2>
+        </div>
+    </section>
+    <section id="register" class="cd-section">
+        <div>
+            <h2>register</h2>
+        </div>
+    </section>
+    <section id="aboutus" class="cd-section">
+        <div>
+            <h2>aboutus</h2>
+        </div>
+    </section>
+    <nav>
+        <ul class="cd-vertical-nav">
+            <li><a href="#0" class="cd-prev inactive">Next</a></li>
+            <li><a href="#0" class="cd-next">Prev</a></li>
+        </ul>
+    </nav> <!-- .cd-vertical-nav -->
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/velocity.min.js"></script>
+    <script src="js/velocity.ui.min.js"></script>
+    <script src="js/main.js"></script> <!-- Resource jQuery -->
+    <script>
+        $(function () {
+            'use strike';
+
+            //Calculate Body Padding Top Depent on Navbar Height
+            $('body').css('paddingTop', $('.tabs').innerHeight() - 50);
+
+            // smoothly scroll To Element
+            $('.tabs a').click(function (e) {
+                e.preventDefault();
+
+                $('html, body').animate({
+
+                    scrollTop: $('#' + $(this).data('scroll')).offset().top
+
+                }, 1000);
+
+                $(this).addClass('active').parent().siblings().find('a').removeClass('active');
+
+            });
+
+            //Sync Navbar Links With Sections
+            $(window).scroll(function () {
+                $('.cd-section').each(function () {
+
+                    if ($(window).scrollTop() > $(this).offset().top - 100) {
+
+                        var blockID = $(this).attr('id');
+
+                        $('.tabs a').removeClass('active');
+
+                        $('.tabs a[data-scroll="' + blockID + '"]').addClass('active');
+
+                        
+
+                        $(".selector").css({
+                            "width": $('.tabs a[data-scroll="' + blockID + '"]').css("width"),
+                            "left": $('.tabs a[data-scroll="' + blockID + '"]').data("left")
+                        });
+                    }
+                });
+            });
+        });
+        // Menu Style
+        var tabs = $('.tabs');
+        var items = $('.tabs').find('a').length;
+        var selector = $(".tabs").find(".selector");
+        var activeItem = tabs.find('.active');
+        var activeWidth = activeItem.innerWidth();
+        $(".selector").css({
+            "left": activeItem.position.left + "px",
+            "width": activeWidth + "px"
+        });
+
+        $(".tabs").on("click", "a", function (e) {
+            e.preventDefault();
+            $('.tabs a').removeClass("active");
+            $(this).addClass('active');
+            var activeWidth = $(this).innerWidth();
+            var itemPos = $(this).position();
+            $(".selector").css({
+                "left": itemPos.left + "px",
+                "width": activeWidth + "px"
+            });
+        });
+
+    </script>
+</body>
+</html>

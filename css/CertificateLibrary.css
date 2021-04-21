@@ -9,20 +9,19 @@
 }
 
     .albums-tab-thumb img {
-        height: 200px;
+        height: 345px;
         width: auto;
         background-color: rgba(255,255,255,0.3);
         padding: 10px;
         border-radius: 10px;
         border: 0.1px solid gray;
+        cursor: pointer;
     }
 
 /* Transformations */
 
 .sim-anim-6 {
     position: relative;
-    left: 50%;
-    transform: translate(-50%, 50%);
 }
 
     .sim-anim-6 img {

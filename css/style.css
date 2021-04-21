@@ -55,11 +55,11 @@ Main Components
   font-size: 2.4rem;
 }
 .cd-section:first-of-type > div {
-  background-color: #2b334f;
+  background-color: #eee;
 }
 .cd-section:first-of-type > div::before {
-  /* alert -> all scrolling effects are not visible on small devices */
-  content: 'Effects not visible on mobile!';
+  /* alert -> all scrolling effects are not visible on small devices -- Effects not visible on mobile! */ 
+  content: '';
   position: absolute;
   width: 100%;
   text-align: center;
@@ -71,16 +71,16 @@ Main Components
   color: #6a7083;
 }
 .cd-section:nth-of-type(2) > div {
-  background-color: #2e5367;
+  background-color:  #eee;
 }
 .cd-section:nth-of-type(3) > div {
-  background-color: #267481;
+  background-color: #eee;
 }
 .cd-section:nth-of-type(4) > div {
-  background-color: #fcb052;
+  background-color: #eee;
 }
 .cd-section:nth-of-type(5) > div {
-  background-color: #f06a59;
+  background-color:  #eee;
 }
 [data-animation="parallax"] .cd-section > div, [data-animation="fixed"] .cd-section > div, [data-animation="opacity"] .cd-section > div {
   background-position: center center;

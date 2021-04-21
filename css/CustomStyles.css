@@ -54,7 +54,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 50%;
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
